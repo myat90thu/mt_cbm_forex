@@ -8,6 +8,8 @@
         - If there has existing rate for the same date, it will override.
     """,
     'author': "MYAT THU",
+    'maintainer': 'Odoo Myanmar',
+    'support': 'odoo.myatthu@gmail.com',
     'version': '12.0.0.1.0',
     'depends': ['base','account',],
     'data': [
@@ -15,4 +17,5 @@
         "views/views.xml",
         "data/mt_cbm_forex_setup.xml",
     ],
+    'images': ['static/description/icon.png'],
 }
