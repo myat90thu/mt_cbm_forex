@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.config_parameter" id="mt_cbm_forex_url">
+            <field name="key">mt_cbm_forex_url</field>
+            <field name="value">http://forex.cbm.gov.mm/api/latest</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      <record id="view_mt_cbm_forex_history" model="ir.ui.view">
+        <field name="name">CBM Sync</field>
+        <field name="model">mt.cbm.forex.history</field>
+        <field name="arch" type="xml">
+            <form string="Replenish wizard">
+                <p>
+                  Click "Get Lastest Rate" button to get latest currencies.
+                </p>
+                <footer>
+                    <button name="get_latest_rate"
+                        string="Get Latest Rate"
+                        type="object"
+                        class="btn-primary"/>
+                    <button string="Discard"
+                        class="btn-secondary"
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_mt_cbm_forex_history_action" model="ir.actions.act_window">
+        <field name="name">CBM Sync</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mt.cbm.forex.history</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_mt_cbm_forex_history"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_view_mt_cbm_forex_history_action" name="CBM Forex" action="view_mt_cbm_forex_history_action"
+        parent="account.account_account_menu" sequence="1"/>
+  </data>
+</odoo>
