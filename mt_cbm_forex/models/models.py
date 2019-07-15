@@ -23,7 +23,10 @@ class MTCbmForexHistory(models.TransientModel):
 
         for currency,rate in rates.items():
             if currency in list_active_currencies_name:
-                rate =  float(rate.replace(',',''))
+                if self.env.user.company_id.currency_id.name not in list(rates.keys()):
+                    rate =  1/float(rate.replace(',',''))
+                else:
+                    rate = float(rate.replace(',',''))
                 currency_id = active_currencies.search([('name','=',currency)]).id
                 existing_rate = self.env['res.currency.rate'].search([('name','=',updated_date),('currency_id','=',currency_id)])
                 if not existing_rate:
