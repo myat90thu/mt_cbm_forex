@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-   'name': "MT CBM Forex Exchange Rate",
+    'name': "MT CBM Forex Exchange Rate",
 
     'summary': "Sync exchange rate from Central Bank of Myanmar",
     'description': """
@@ -10,8 +10,8 @@
     'author': "MYAT THU",
     'maintainer': 'Odoo Myanmar',
     'support': 'odoo.myatthu@gmail.com',
-    'version': '12.0.0.1.0',
-    'depends': ['base','account',],
+    'version': '13.0.0.1.0',
+    'depends': ['base', 'account', ],
     'data': [
         "security/ir.model.access.csv",
         "views/views.xml",

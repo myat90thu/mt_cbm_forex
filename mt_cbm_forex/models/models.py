@@ -13,7 +13,6 @@ class MTCbmForexHistory(models.TransientModel):
     name = fields.Datetime(string='Sync Date', default=fields.datetime.now())
     data = fields.Text(string='Sync Data')
 
-    @api.multi
     def get_latest_rate(self):
         api_url = self.env["ir.config_parameter"].sudo().get_param(
             "mt_cbm_forex_url")
@@ -51,7 +50,7 @@ class MTCbmForexHistory(models.TransientModel):
 
         return self.create({
             'name':
-            time.strftime('%Y-%m-%d %H:%M%S',
+            time.strftime('%Y-%m-%d %H:%M:%S',
                           time.localtime(int(response.get('timestamp')))),
             'data':
             response

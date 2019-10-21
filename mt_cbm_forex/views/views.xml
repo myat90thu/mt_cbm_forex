@@ -26,13 +26,13 @@
         <field name="name">CBM Sync</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">mt.cbm.forex.history</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_mt_cbm_forex_history"/>
         <field name="target">new</field>
     </record>
 
-    <menuitem id="menu_view_mt_cbm_forex_history_action" name="CBM Forex" action="view_mt_cbm_forex_history_action"
-        parent="account.account_account_menu" sequence="1"/>
+    
+
+    <menuitem id="menu_view_mt_cbm_forex_history_action" action="mt_cbm_forex.view_mt_cbm_forex_history_action" name="CBM Forex" parent="account.account_account_menu" sequence="1" groups="base.group_multi_currency"/>
   </data>
 </odoo>
